@@ -109,7 +109,8 @@ io.on('connection', async (socket) => {
     console.log('--- User disconnected ---');
   });
 });
-const PORT = process.env.PORT || 5000;
+// Prefer env PORT; if not set, use 5001 (5000 can be taken by macOS Control Center)
+const PORT = Number(process.env.PORT) || 5005;
 server.listen(PORT, () => {
   console.log(`Server running in ES6 Module mode on port ${PORT}`);
 });

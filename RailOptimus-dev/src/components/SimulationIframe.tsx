@@ -13,7 +13,7 @@ const SimulationIframe: React.FC<SimulationIframeProps> = ({ className }) => {
   const [isError, setIsError] = useState(false);
   const [iframeKey, setIframeKey] = useState(0);
 
-  const SIMULATION_URL = "http://127.0.0.1:8050";
+  const SIMULATION_URL = "http://localhost:8050";
 
   const handleIframeLoad = () => {
     setIsLoading(false);

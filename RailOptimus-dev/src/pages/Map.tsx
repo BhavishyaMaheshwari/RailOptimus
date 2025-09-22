@@ -3,6 +3,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { MapContainer, TileLayer, GeoJSON ,useMap} from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import axios from 'axios';
+import { apiUrl } from '../lib/api';
 import { useAuthStore } from '../stores/authStore';
 import L from 'leaflet'; // Import the main Leaflet library to create custom icons
 import StationIconUrl from '../assets/pin.png';
@@ -111,7 +112,7 @@ const MapPage: React.FC = () => {
     if (user?.section) {
       const fetchMapData = async () => {
         try {
-          const response = await axios.get(`http://localhost:5000/api/maps/mapdata/${user.section.toLowerCase()}`);
+          const response = await axios.get(apiUrl(`/api/maps/mapdata/${user.section.toLowerCase()}`));
           const data = response.data;   // ✅ extract response data
           setMapData(data);
         } catch (error) {

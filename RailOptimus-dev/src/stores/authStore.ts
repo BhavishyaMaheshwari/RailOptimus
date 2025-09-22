@@ -36,8 +36,9 @@ interface AuthState {
 
 // --- 2. Configure API URL ---
 
-// The base URL for your backend user routes
-const API_URL = 'http://localhost:5000/api/users'; // Adjust port if it's different
+// The base URL for your backend user routes (configured via Vite env)
+const API_BASE = (import.meta as any).env?.VITE_API_BASE || 'http://localhost:5005';
+const API_URL = `${API_BASE}/api/users`;
 
 // --- 3. Create the Zustand Store ---
 

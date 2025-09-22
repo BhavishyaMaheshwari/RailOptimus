@@ -342,6 +342,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import axios from "axios";
+import { apiUrl } from "@/lib/api";
 import { useAuthStore } from "@/stores/authStore";
 import AIPredictorCard from "../components/AIPredictorCard";
 import {
@@ -452,9 +453,7 @@ export default function Dashboard() {
       try {
         setLoading(true);
         const section = user.section.toLowerCase();
-        const resp = await axios.get(
-          `http://localhost:5000/api/trains/${section}`
-        );
+        const resp = await axios.get(apiUrl(`/api/trains/${section}`));
         setAllTrainRoutes(resp.data || []);
         setError(null);
       } catch (err) {

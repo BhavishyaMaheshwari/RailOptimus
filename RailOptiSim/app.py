@@ -480,8 +480,8 @@ server = app.server
 @server.after_request
 def after_request(response):
     # Allow the app to be embedded in an iframe from localhost
-    response.headers['X-Frame-Options'] = 'ALLOW-FROM http://localhost:8081'
-    response.headers['Content-Security-Policy'] = "frame-ancestors 'self' http://localhost:8081 http://127.0.0.1:8081"
+    response.headers['X-Frame-Options'] = 'ALLOW-FROM http://localhost:8080'
+    response.headers['Content-Security-Policy'] = "frame-ancestors 'self' http://localhost:8080 http://127.0.0.1:8080"
     return response
 
 print("Web application initialized with professional styling")
@@ -1521,7 +1521,7 @@ if __name__ == "__main__":
     # Launch the application with professional settings
     app.run(
         debug=True,
-        host='127.0.0.1',
+        host='localhost',
         port=8050,
         dev_tools_hot_reload=True
     )
