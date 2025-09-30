@@ -1,9 +1,9 @@
 ## SIH 2025
 
-- **Ministry:** Ministry of Railways
+- **Ministry:** Ministry of Education's Innovation Cell (MIC)
 - **Theme:** Transportation & Logistics
-- **PS Code:** 25022
-- **Problem Statement:** Maximising Section Throughput Using Al-Powered Precise Train Traffic Control
+- **PS Code:** 25138
+- **Problem we're tackling:** Maximising Section Throughput Using Al-Powered Precise Train Traffic Control
 
 ## Team Details
 
